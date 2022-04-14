@@ -1,16 +1,36 @@
-import React  from "react";
+import React,{Suspense }  from "react";
+
+import {Routes , Route} from "react-router-dom";
+
 import Navbar from "./components/navbar";
-import Home from "./component-main/home";
+import Footer from "./components/footer/footer";
+import Loading from "./components/loading/loading";
+
+
+
+const Home = React.lazy(() => import("./component-main/home"));
+const Product = React.lazy(() => import("./component-main/product"));
+
+
+
+
 
 function App() {
 
 
 
   return (
-      <>
-       <Navbar/>
-       <Home/>
-      </>
+      <Suspense fallback={<Loading/>}>
+          <Navbar/>
+
+            <Routes>
+                <Route exact path="/" element={<Home/>}/>
+                <Route path="/product" element={<Product/>}/>
+            </Routes>
+
+
+        <Footer/>
+      </Suspense>
   );
 }
 

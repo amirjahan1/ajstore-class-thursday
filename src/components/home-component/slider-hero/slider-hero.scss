@@ -1,0 +1,10 @@
+#slider-hero
+{
+  height: calc(100vh - 110px);
+}
+
+#slider-hero  img.img-slider
+{
+  width: 100vw;
+  height: calc(100vh - 110px) !important;
+}

@@ -4,7 +4,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./slider-hero.scss";
-import {data} from "autoprefixer";
 
 
 
@@ -31,7 +30,7 @@ const SliderHero = () => {
                     numOfSlider.map((item,index)=>{
                         return(
                             <div key={index}>
-                                <img src={`./img/slider-hero/pic${item}.jpg`}  alt="aj_store"/>
+                                <img src={`./img/slider-hero/pic${item}.jpg`}  alt="aj_store" className="img-slider"/>
                             </div>
                         )
                     })

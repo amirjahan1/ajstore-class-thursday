@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&display=swap');
+
+#under-hero
+{
+  width: 100%;
+
+  & #under-hero1
+  {
+    height: 270px;
+    background: url("under-hero/spring.jpg") no-repeat center center;
+    background-size: cover;
+    line-height: 270px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    &:hover > section
+    {
+      opacity: 0;
+    }
+
+    &:hover > section > span
+    {
+      top: -300px;
+    }
+    & > section
+    {
+      transition: all 0.35s ease-in-out;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      position: absolute;
+      top:0;
+      & > span { font-family: 'Hurricane', cursive; font-weight: 900 ; position: relative ; top : 0px ; transition: 350ms }
+    }
+  }
+
+  & #under-hero2
+  {
+    height: 270px;
+    background: url("under-hero/summer.jpg") no-repeat center center;
+    background-size: cover;
+    line-height: 270px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    &:hover > section
+    {
+      opacity: 0;
+    }
+
+    &:hover > section > span
+    {
+      top: -300px;
+    }
+    & > section
+    {
+      transition: all 0.35s ease-in-out;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      position: absolute;
+      top:0;
+      & > span { font-family: 'Hurricane', cursive; font-weight: 900; position: relative ; top : 0px ; transition: 350ms  }
+    }
+  }
+
+  & #under-hero3
+  {
+    height: 270px;
+    background: url("under-hero/fall.jpeg") no-repeat center center;
+    background-size: cover;
+    line-height: 270px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    &:hover > section
+    {
+      opacity: 0;
+    }
+
+    &:hover > section > span
+    {
+      top: -300px;
+    }
+    & > section
+    {
+      transition: all 0.35s ease-in-out;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      position: absolute;
+      top:0;
+      z-index: 10;
+      & > span { font-family: 'Hurricane', cursive; font-weight: 900; position: relative ; top : 0px ; transition: 350ms  }
+    }
+  }
+
+  & #under-hero4
+  {
+    height: 270px;
+    background: url("under-hero/winter.jpeg") no-repeat center center;
+    background-size: cover;
+    line-height: 270px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    &:hover > section
+    {
+      opacity: 0;
+    }
+
+    &:hover > section > span
+    {
+      top: -300px;
+    }
+    & > section
+    {
+      transition: all 0.35s ease-in-out;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      position: absolute;
+      top:0;
+      & > span { font-family: 'Hurricane', cursive; font-weight: 900; position: relative ; top : 0px ; transition: 350ms  }
+    }
+  }
+}
+
