@@ -1,0 +1,9 @@
+.inner-card
+{
+ transition: 300ms;
+}
+
+.card:hover > .inner-card
+{
+    top: 0;
+}

@@ -22,7 +22,7 @@ const Navbar = () => {
 
     return(
         <>
-            <div className="lg:hidden md:flex sm:flex flex justify-between items-center " >
+            <div  className="lg:hidden md:flex sm:flex flex justify-between items-center " >
                 <Hamburger toggled={isOpen} toggle={setOpen} />
                 {
                     !isOpen ?
@@ -36,7 +36,7 @@ const Navbar = () => {
                 }
 
             </div>
-            <nav className={`w-full flex lg:flex-row md:flex-col sm:flex-col flex-col justify-evenly items-center ${isOpen ? "active" : null} sticky top-0 z-50 bg-white `} id="header">
+            <nav style={{boxShadow:'0 -10px 10px 3px #292a36'}} className={`w-full flex lg:flex-row md:flex-col sm:flex-col flex-col justify-evenly items-center ${isOpen ? "active" : null} sticky top-0 z-50 bg-white `} id="header">
 
                 <div className="lg:w-2/12 md:w-full sm:w-full w-full flex justify-center mt-2">
                     <Link to="/">
