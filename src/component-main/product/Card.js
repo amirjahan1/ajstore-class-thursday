@@ -1,5 +1,8 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
+import {useDispatch} from "react-redux";
+
+import {SELECTED_PRODUCT} from '../../redux/actions/actionTypes'
 import 'animate.css';
 import "./card.css"
 
@@ -7,6 +10,24 @@ import "./card.css"
 const Card = ({item}) => {
 
         const navigate = useNavigate();
+        const dispatch = useDispatch();
+
+       async function ShowDetailOfProduct(id,firstName,lastName,price,img)
+        {
+
+          await dispatch({
+               type: SELECTED_PRODUCT,
+               payload: {
+                   id: id,
+                   name: firstName + " " + lastName,
+                   price: price,
+                   img: img
+               }
+           })
+
+           await navigate(`/product/${firstName}`);
+
+        }
 
     return(
         <div className="animate__animated animate__fadeIn card rounded-xl  m-10 h-auto  flex flex-col justify-between items-center cursor-pointer">
@@ -45,7 +66,7 @@ const Card = ({item}) => {
                 </p>
 
 
-                <div onClick={()=>navigate(`/product/${item.first_name}`)} className="w-full mt-2 px-4  flex flex-wrap justify-between items-center ">
+                <div onClick={()=>ShowDetailOfProduct(item.id , item.first_name , item.last_name ,item.price , item.img)} className="w-full mt-2 px-4  flex flex-wrap justify-between items-center ">
                     <span style={{boxShadow:'0px 1px 1px #292a36'}}
                        className="bg-indigo-500 hover:bg-indigo-700 text-white  cursor-pointer rounded inline-flex items-center justify-center px-4 py-2 w-full transition ease-in-out  duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24"

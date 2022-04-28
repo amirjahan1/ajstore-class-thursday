@@ -8,6 +8,7 @@ import {ReactComponent as Logo} from './navbar-logo.svg'
 
 import 'remixicon/fonts/remixicon.css'
 import "./navbar.scss"
+import NavBadge from "./badge";
 
 
 
@@ -15,7 +16,7 @@ import "./navbar.scss"
 const Navbar = () => {
 
 
-    const [logoHover, setLogoHover] = useState(false)
+
     const [isOpen, setOpen] = useState(false)
 
 
@@ -54,16 +55,9 @@ const Navbar = () => {
 
                 <div className="lg:w-2/12 md:w-full sm:w-full w-full flex justify-center px-10">
                     <button
-                        onMouseEnter={()=>setLogoHover(true)}
-                        onMouseLeave={()=>setLogoHover(false)}
-                        className="mt-3 bg-gray-800 hover:bg-blue-900 transition duration-300 text-white font-bold py-2 px-4 rounded flex lg:justify-between items-center w-full flex md:justify-center sm:justify-center justify-center">
-                        {
-                            logoHover
-                                ?
-                                <img src="./img/navbar-logo/logo.gif"  alt="AJ_store" style={{ height:'40px'}} />
-                                :
-                                <Logo style={{ height:'40px'}}/>
-                        }
+
+                        className="mt-3 bg-gray-800  transition duration-300 text-white font-bold py-2 px-4 rounded flex lg:justify-between items-center w-full flex md:justify-center sm:justify-center justify-center">
+                            <NavBadge/>
                         <span className="ml-2">
                         Your Cart
                     </span>
