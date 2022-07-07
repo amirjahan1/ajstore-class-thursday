@@ -1,6 +1,6 @@
 import React,{useState}  from 'react'
 
-import {Link} from "react-router-dom";
+import {Link , useNavigate} from "react-router-dom";
 import { Twirl as Hamburger } from 'hamburger-react'
 
 
@@ -16,7 +16,7 @@ import NavBadge from "./badge";
 const Navbar = () => {
 
 
-
+    const navigate = useNavigate()
     const [isOpen, setOpen] = useState(false)
 
 
@@ -55,7 +55,7 @@ const Navbar = () => {
 
                 <div className="lg:w-2/12 md:w-full sm:w-full w-full flex justify-center px-10">
                     <button
-
+                        onClick={()=>navigate('./product-card')}
                         className="mt-3 bg-gray-800  transition duration-300 text-white font-bold py-2 px-4 rounded flex lg:justify-between items-center w-full flex md:justify-center sm:justify-center justify-center">
                             <NavBadge/>
                         <span className="ml-2">

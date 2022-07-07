@@ -4,5 +4,5 @@ import ProductReducer from './product-reducer';
 
 
 export const rootReducer = combineReducers({
-    product: ProductReducer
+    product: ProductReducer,
 })

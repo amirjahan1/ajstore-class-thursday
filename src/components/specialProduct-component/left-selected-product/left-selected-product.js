@@ -1,7 +1,7 @@
 import React from 'react';
 import AddToCardButton from "./add-to-card-button";
 
-const LeftSelectedProduct = ({img , name}) => {
+const LeftSelectedProduct = ({img, name,}) => {
 
 
     return(
